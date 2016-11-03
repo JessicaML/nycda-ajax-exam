@@ -12,22 +12,38 @@ Instructions:
 
 1. What is a server? What does a server do?
 
+It is a computer which provides web pages and applications to a client (e.g. a user accessing web pages through the browser.)
+
 2. What is Node.js?
+
+Node.js is a library or framework which is based on JavaScript. It allows us to use JavaScript for backend programming (making http requests and responses.)
 
 3. What is express?
 
+Express is a package which allows you to use your computer as a server.
+
 4. What is a client? What does a client do?
+
+A client makes requests to the server to access web pages or applications.
 
 5. How do the server and the client communicate?
 
+Through http requests and responses.
+
 6. Debugging:
 - 6a. How do you view server logs?
+
+Through middle ware such as Morgan, or through console.log statements within your code.
+
 - 6b. How do you view client logs?
 
+Right click > Inspect > Network
 ---
 ### Part 2: HTTP Requests - 15 minutes
 
 1. What is an HTTP Request?
+
+A request from the client to the server to access a web page.
 
 2. GET Requests
 - 2a. What is a GET request?
@@ -36,7 +52,11 @@ Instructions:
 
 3. POST Requests
 - 3a. What is a POST request?
+
+
 - 3b. When do you use POST requests?
+
+
 - 3c. How do you send data in a POST request?
 
 ---
@@ -48,7 +68,12 @@ Instructions:
 
 1. Ajax
 - 1a. What is Ajax?
+
+Asynchronous JavaScript and XML.
+
 - 1b. When should you use Ajax?
+
+To create a webpage which has updated content without refreshing the page.
 
 2. Given the following code snippet:
 
@@ -70,6 +95,18 @@ console.log("F");
 ```
 
 - 2a. Describe what seems to be happening.
+
+1. "A" is logged to the console.
+2. When the element with id map is clicked,
+		a) "B" is logged to the console.
+		b) "C" is logged to the console.
+		c) A get request is initiated to url: /map
+		d) 	- wrapped in an object is coordinates called to x and to y.
+		    - "D" is logged to the console.
+				- call update function on mapDisplay
+		e) "E" is logged to the console.
+3. "F" is logged to the console.
+
 - 2b. In what order is `A` through `F` printed?
 - 2c. Describe the events that happen between each letter. When does the server get hit?
 
@@ -82,9 +119,16 @@ console.log("F");
 
 1. Jade
 - 1a. What is Jade?
+
+(Pug) is a templating language used to render html.
+
 - 1b. Why should we use Jade?
 
+In order to write DRY code (e.g. content that remains the same across many pages of a website or app - the nav bar, side bar, styling etc. should be edited it 1 file. )
+
 2. Explain the difference between 'server side' JavaScript and 'client side' JavaScript.
+
+Client side refers to the front end, user interactions etc. (JQuery event handlers) and server side refers to backend side, http requests.
 
 3. Given this example `index.jade` file:
 
@@ -101,6 +145,9 @@ html
 ```
 
 - 3a. Is `x` executed server side or client side? Does the client ever see `x`?
+
+client side, but the client only sees h2
+
 - 3b. Is `y` executed server side or client side? Does the client ever see `y`?
 - 3c. Is `z` executed server side or client side? Does the client ever see `z`?
 - 3d. When is `boop.js` executed? Does the client ever see `boop.js`?
